@@ -5,12 +5,12 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.MenuItem;
 import android.widget.TextView;
 
-public class SellerProfile extends ActionBarActivity {
+public class Login extends ActionBarActivity{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profile);
+        setContentView(R.layout.activity_login);
     }
 
     @Override
@@ -21,10 +21,11 @@ public class SellerProfile extends ActionBarActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_profile) {
+        if (id == R.id.action_login) {
             return true;
         }
 
         return super.onOptionsItemSelected(item);
     }
 }
+
