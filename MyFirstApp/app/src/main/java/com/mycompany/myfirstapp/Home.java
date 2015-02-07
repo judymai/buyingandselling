@@ -100,7 +100,7 @@ public class Home extends ActionBarActivity {
     }
 
     public void openSettings() {
-        Intent intent = new Intent(this, Settings.class);
+        Intent intent = new Intent(this, activity_setting.class);
         startActivity(intent);
     }
 
