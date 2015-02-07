@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     android:weightSum="1">
 
     <Button
@@ -19,6 +19,13 @@
         android:paddingRight="30dp"
         android:paddingTop="0dp"
         android:paddingBottom="0dp" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v4.view.ViewPager>
 
     <!--onClick with Parse should oAuth to FB-->
 </LinearLayout>
