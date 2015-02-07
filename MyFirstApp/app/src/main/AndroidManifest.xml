@@ -54,11 +54,11 @@
             android:name=".SearchActivity"
             android:icon="@drawable/ic_launcher"
             android:label="@string/search_message"
-            android:parentActivityName=".MainActivity" >
+            android:parentActivityName=".MainActivity"
+            android:launchMode="singleTop">
+
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.SEARCH" />
-                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
 
             <meta-data

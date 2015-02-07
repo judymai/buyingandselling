@@ -1,5 +1,7 @@
 package com.mycompany.myfirstapp;
 
+import android.app.SearchManager;
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -8,6 +10,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.SearchView;
 import android.widget.TextView;
 
 import com.parse.Parse;
@@ -34,6 +37,13 @@ public class MainActivity extends ActionBarActivity {
         // Inflate the menu; this adds items to the action bar if it is present.
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu_main,menu);
+
+        /*
+        SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
+        SearchView searchView = (SearchView) menu.findItem(R.id.action_search).getActionView();
+        searchView.setSearchableInfo( searchManager.getSearchableInfo(getComponentName()) );
+        */
+
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -52,9 +62,20 @@ public class MainActivity extends ActionBarActivity {
             case R.id.action_login:
                 openLogin();
                 return true;
+            case R.id.action_search:
+                onSearchRequested();
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+
+    @Override
+    public boolean onSearchRequested() {
+        Bundle appData = new Bundle();
+        appData.putString("hello", "world");
+        startSearch(null, false, appData, false);
+        return true;
     }
 
     public void sendMessage(View view) {
