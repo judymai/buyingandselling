@@ -1,8 +1,10 @@
 package com.mycompany.myfirstapp;
 
+import android.app.ActionBar;
 import android.app.SearchManager;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -29,8 +31,24 @@ public class MainActivity extends ActionBarActivity {
 
         Parse.initialize(this, "DrytnAJeUWXXNixWdFQNB8gUqQDZsi0GSqO7sTB3", "6lgg4j81kBXjWjUMVociUUkc0D5yCxaDTy5W1gMP");
 
+        // Font change
+        /*
+        TextView myTextView=(TextView)findViewById(R.id.textBox);
+        Typeface typeFace=Typeface.createFromAsset(getAssets(),"fonts/Roboto-Regular.ttf");
+        myTextView.setTypeface(typeFace);
+        */
+        /*Typeface tf = Typeface.createFromAsset(getApplicationContext().getAssets(),"fonts/fontname.ttf");
+        textview.setTypeface(tf);*/
+
     }
 
+    public static void setFont(TextView textView) {
+        Typeface tf = Typeface.createFromAsset(textView.getContext()
+                .getAssets(), "fonts/Roboto-Regular.ttf");
+
+        textView.setTypeface(tf);
+
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

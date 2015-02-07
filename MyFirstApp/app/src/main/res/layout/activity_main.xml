@@ -1,23 +1,84 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="horizontal"
-    android:weightSum="1">
+    android:background="@color/black"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
 
-    <Button
+    <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/action_login"
-        android:onClick="sendMessage"
-        android:layout_gravity="center_vertical"
-        android:layout_weight="1"
-        android:clickable="true"
-        android:elegantTextHeight="false"
-        android:enabled="false"
-        android:paddingLeft="30dp"
-        android:paddingRight="30dp"
-        android:paddingTop="0dp"
-        android:paddingBottom="0dp" />
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/title_page"
+            android:layout_weight="1" />
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@color/black" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/textContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+        <TextView
+            android:id="@+id/basicText"
+            android:layout_width="100sp"
+            android:layout_height="120sp"
+            android:layout_gravity="center_vertical"
+            android:text="BASIC"
+            android:textColor="@color/white"
+            android:textSize="100sp"
+            android:textStyle="bold"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="false"
+            android:longClickable="false"
+            android:linksClickable="false"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/descText"
+            android:layout_width="100sp"
+            android:layout_height="50sp"
+            android:text="Buying and Selling is Classy"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textIsSelectable="true"
+            android:gravity="center"
+            android:layout_below="@+id/basicText"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <!--facebook button-->
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/action_login"
+            android:textColor="@color/white"
+            android:onClick="sendMessage"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:elegantTextHeight="false"
+            android:enabled="false"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp"
+            android:layout_marginBottom="80dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginLeft="50dp"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+
     <!--onClick with Parse should oAuth to FB-->
-</LinearLayout>
+</RelativeLayout>
