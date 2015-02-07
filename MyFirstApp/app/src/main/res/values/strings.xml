@@ -12,7 +12,7 @@
     <string name="action_settings">Settings</string>
     <string name="home">Explore</string>
     <string name="profile_message">Jane Doe</string>
-    <string name="login_message">Log in with Facebook</string>
+    <string name="login_message">Login with Facebook</string>
     <string name="settings_message">Edit your settings</string>
     <string name="search_message">Searching....</string>
     <string name="title_activity_profile">profile</string>
