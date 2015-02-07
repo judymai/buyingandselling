@@ -48,6 +48,17 @@
             android:name=".Login"
             android:label="Login"
             android:parentActivityName=".MainActivity" >
+<<<<<<< HEAD
+=======
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mycompany.myfirstapp.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Settings"
+            android:label="Settings"
+            android:parentActivityName=".MainActivity" >
+>>>>>>> tabs
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.mycompany.myfirstapp.MainActivity" />
@@ -66,8 +77,20 @@
                 android:name="android.app.searchable"
                 android:resource="@xml/searchable"
                 android:value="com.mycompany.myfirstapp.MainActivity" />
+<<<<<<< HEAD
+=======
+        </activity>
+        <activity
+            android:name=".Tabbed"
+            android:label="@string/title_activity_tabbed" >
+        </activity>
+        <activity
+            android:name=".Frag1"
+            android:label="@string/title_activity_frag1" >
+>>>>>>> tabs
         </activity>
 
+<<<<<<< HEAD
         <!--
         <activity
             android:name=".activity_setting"
@@ -93,4 +116,6 @@
         </activity>
     </application>
 
+=======
+>>>>>>> tabs
 </manifest>
