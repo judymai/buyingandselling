@@ -38,6 +38,7 @@
         <activity
             android:name=".SellerProfile"
             android:label="Profile"
+            android:icon="@drawable/ic_action_user"
             android:parentActivityName=".MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -51,17 +52,10 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.mycompany.myfirstapp.MainActivity" />
         </activity>
-        <activity
-            android:name=".Settings"
-            android:label="Settings"
-            android:parentActivityName=".MainActivity" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.mycompany.myfirstapp.MainActivity" />
-        </activity>
+
         <activity
             android:name=".SearchActivity"
-            android:icon="@drawable/ic_launcher"
+            android:icon="@drawable/ic_action_search"
             android:label="@string/search_message"
             android:launchMode="singleTop"
             android:parentActivityName=".MainActivity" >
@@ -74,9 +68,25 @@
                 android:resource="@xml/searchable"
                 android:value="com.mycompany.myfirstapp.MainActivity" />
         </activity>
+
+        <!--
         <activity
             android:name=".activity_setting"
-            android:label="@string/title_activity_activity_setting" >
+            android:label="Settings"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mycompany.myfirstapp.MainActivity" />
+        </activity>
+        -->
+        <activity
+            android:name=".activity_setting"
+            android:icon="@drawable/ic_action_search"
+            android:label="@string/title_activity_activity_setting"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mycompany.myfirstapp.MainActivity" />
         </activity>
     </application>
 
