@@ -1,15 +1,17 @@
 package com.mycompany.myfirstapp;
 
 
-import android.app.ActionBar;
+import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -25,12 +27,14 @@ import com.facebook.Session;
 
 import java.util.Locale;
 
-public class Home extends ActionBarActivity {
+public class Home extends ActionBarActivity implements ActionBar.TabListener {
 
     private TextView displayText;
     public final static String EXTRA_MESSAGE = "com.mycompany.myfirstapp.MESSAGE";
     SectionsPagerAdapter mSectionsPagerAdapter;
     ViewPager mViewPager;
+    ActionBar actionBar;
+    String[] tabs = {"One","Two","Three"};
 
 
     @Override
@@ -46,6 +50,27 @@ public class Home extends ActionBarActivity {
         mViewPager = (ViewPager) findViewById(R.id.pager);
         mViewPager.setAdapter(mSectionsPagerAdapter);
 
+        actionBar = getSupportActionBar();
+        actionBar.setHomeButtonEnabled(false);
+        actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
+
+        for (String tab_name : tabs) {
+            actionBar.addTab(actionBar.newTab().setText(tab_name).setTabListener(this));
+        }
+
+        mViewPager.setOnPageChangeListener(
+            new ViewPager.OnPageChangeListener() {
+                @Override
+                public void onPageSelected(int position) {
+                    actionBar.setSelectedNavigationItem(position);
+                }
+                @Override
+                public void onPageScrolled(int arg0, float arg1, int arg2) {
+                }
+                @Override
+                public void onPageScrollStateChanged(int arg0){
+                }
+            });
         Parse.initialize(this, "DrytnAJeUWXXNixWdFQNB8gUqQDZsi0GSqO7sTB3", "6lgg4j81kBXjWjUMVociUUkc0D5yCxaDTy5W1gMP");
 
     }
@@ -112,6 +137,21 @@ public class Home extends ActionBarActivity {
     public void openLogin() {
         Intent intent = new Intent(this,Login.class);
         startActivity(intent);
+    }
+
+    @Override
+    public void onTabSelected(ActionBar.Tab tab, android.support.v4.app.FragmentTransaction fragmentTransaction) {
+        mViewPager.setCurrentItem(tab.getPosition());
+    }
+
+    @Override
+    public void onTabUnselected(ActionBar.Tab tab, android.support.v4.app.FragmentTransaction fragmentTransaction) {
+
+    }
+
+    @Override
+    public void onTabReselected(ActionBar.Tab tab, android.support.v4.app.FragmentTransaction fragmentTransaction) {
+
     }
 
 
