@@ -34,7 +34,6 @@ public class Home extends ActionBarActivity implements ActionBar.TabListener {
     SectionsPagerAdapter mSectionsPagerAdapter;
     ViewPager mViewPager;
     ActionBar actionBar;
-    String[] tabs = {"One","Two","Three"};
 
 
     @Override
@@ -54,10 +53,9 @@ public class Home extends ActionBarActivity implements ActionBar.TabListener {
         actionBar.setHomeButtonEnabled(false);
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 
-        for (String tab_name : tabs) {
-            actionBar.setIcon(R.drawable.ic_action_star);
-            actionBar.addTab(actionBar.newTab().setText(tab_name).setTabListener(this));
-        }
+        actionBar.addTab(actionBar.newTab().setIcon(R.drawable.ic_action_star).setTabListener(this));
+        actionBar.addTab(actionBar.newTab().setIcon(R.drawable.ic_action_photo).setTabListener(this));
+        actionBar.addTab(actionBar.newTab().setIcon(R.drawable.ic_action_select_all).setTabListener(this));
 
         mViewPager.setOnPageChangeListener(
             new ViewPager.OnPageChangeListener() {
@@ -191,19 +189,6 @@ public class Home extends ActionBarActivity implements ActionBar.TabListener {
             return 3;
         }
 
-        @Override
-        public CharSequence getPageTitle(int position) {
-            Locale l = Locale.getDefault();
-            switch (position) {
-                case 0:
-                    return getString(R.string.title_section1).toUpperCase(l);
-                case 1:
-                    return getString(R.string.title_section2).toUpperCase(l);
-                case 2:
-                    return getString(R.string.title_section3).toUpperCase(l);
-            }
-            return null;
-        }
     }
 
     /**
