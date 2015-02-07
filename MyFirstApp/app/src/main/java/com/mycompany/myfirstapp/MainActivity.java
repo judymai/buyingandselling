@@ -1,10 +1,6 @@
 package com.mycompany.myfirstapp;
 
-import android.app.SearchableInfo;
-import android.content.Context;
 import android.content.Intent;
-import android.database.Cursor;
-import android.provider.ContactsContract;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -12,19 +8,10 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
-import android.app.Activity;
-import android.app.SearchManager;
-import android.app.SearchableInfo;
-import android.content.Context;
-import android.content.Intent;
-import android.database.Cursor;
-import android.os.Bundle;
-import android.provider.ContactsContract;
-import android.widget.SearchView;
 import android.widget.TextView;
 
 import com.parse.Parse;
-
+import com.facebook.Session;
 
 public class MainActivity extends ActionBarActivity {
 
