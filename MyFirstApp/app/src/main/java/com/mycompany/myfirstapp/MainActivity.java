@@ -72,6 +72,9 @@ public class MainActivity extends ActionBarActivity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         switch (item.getItemId()) {
+            case R.id.home:
+                goHome();
+                return true;
             case R.id.action_settings:
                 openSettings();
                 return true;
@@ -97,11 +100,17 @@ public class MainActivity extends ActionBarActivity {
         return true;
     }
 
+
     public void sendMessage(View view) {
         Intent intent = new Intent(this, DisplayMessageActivity.class);
         EditText editText = (EditText) findViewById(R.id.edit_message);
         String message = editText.getText().toString();
         intent.putExtra(EXTRA_MESSAGE,message);
+        startActivity(intent);
+    }
+
+    public void goHome () {
+        Intent intent = new Intent(this, Home.class);
         startActivity(intent);
     }
 

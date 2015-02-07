@@ -36,6 +36,14 @@
                 android:value="com.mycompany.myfirstapp.MainActivity" />
         </activity>
         <activity
+            android:name=".Home"
+            android:label="Explore"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mycompany.myfirstapp.MainActivity" />
+        </activity>
+        <activity
             android:name=".SellerProfile"
             android:icon="@drawable/ic_action_user"
             android:label="Profile"
