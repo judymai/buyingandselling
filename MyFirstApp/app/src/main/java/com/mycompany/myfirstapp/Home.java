@@ -55,6 +55,7 @@ public class Home extends ActionBarActivity implements ActionBar.TabListener {
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 
         for (String tab_name : tabs) {
+            actionBar.setIcon(R.drawable.ic_action_star);
             actionBar.addTab(actionBar.newTab().setText(tab_name).setTabListener(this));
         }
 
@@ -82,7 +83,7 @@ public class Home extends ActionBarActivity implements ActionBar.TabListener {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu_main, menu);
 
-        return true;
+        return super.onCreateOptionsMenu(menu);
     }
 
     @Override

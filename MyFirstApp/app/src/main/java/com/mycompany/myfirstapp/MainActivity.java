@@ -63,7 +63,7 @@ public class MainActivity extends ActionBarActivity {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu_main, menu);
 
-        return true;
+        return super.onCreateOptionsMenu(menu);
     }
 
     @Override
