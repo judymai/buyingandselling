@@ -53,11 +53,11 @@ public class SellerProfile extends ActionBarActivity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         switch (item.getItemId()) {
+            case R.id.home:
+                goHome();
+                return true;
             case R.id.action_settings:
                 openSettings();
-                return true;
-            case R.id.action_profile:
-                openProfile();
                 return true;
             case R.id.action_login:
                 openLogin();
@@ -78,13 +78,13 @@ public class SellerProfile extends ActionBarActivity {
         return true;
     }
 
-    public void openSettings() {
-        Intent intent = new Intent(this, activity_setting.class);
+    public void goHome () {
+        Intent intent = new Intent(this, Home.class);
         startActivity(intent);
     }
 
-    public void openProfile() {
-        Intent intent = new Intent(this, SellerProfile.class);
+    public void openSettings() {
+        Intent intent = new Intent(this, activity_setting.class);
         startActivity(intent);
     }
 

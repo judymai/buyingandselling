@@ -31,14 +31,14 @@ public class Login extends ActionBarActivity{
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         switch (item.getItemId()) {
+            case R.id.home:
+                goHome();
+                return true;
             case R.id.action_settings:
                 openSettings();
                 return true;
             case R.id.action_profile:
                 openProfile();
-                return true;
-            case R.id.action_login:
-                openLogin();
                 return true;
             case R.id.action_search:
                 onSearchRequested();
@@ -56,6 +56,11 @@ public class Login extends ActionBarActivity{
         return true;
     }
 
+    public void goHome () {
+        Intent intent = new Intent(this, Home.class);
+        startActivity(intent);
+    }
+
     public void openSettings() {
         Intent intent = new Intent(this, activity_setting.class);
         startActivity(intent);
@@ -63,11 +68,6 @@ public class Login extends ActionBarActivity{
 
     public void openProfile() {
         Intent intent = new Intent(this, SellerProfile.class);
-        startActivity(intent);
-    }
-
-    public void openLogin() {
-        Intent intent = new Intent(this,Login.class);
         startActivity(intent);
     }
 

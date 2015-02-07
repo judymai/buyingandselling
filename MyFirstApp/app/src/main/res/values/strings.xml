@@ -17,9 +17,9 @@
     <string name="search_message">Searching....</string>
     <string name="title_activity_profile">profile</string>
     <string name="title_activity_tabbed">Tabbed</string>
-    <string name="title_section1">Section 1</string>
-    <string name="title_section2">Section 2</string>
-    <string name="title_section3">Section 3</string>
+    <string name="title_section1">Seller</string>
+    <string name="title_section2">Items for Sale</string>
+    <string name="title_section3">Contact Information</string>
     <string name="title_activity_frag1">Frag1</string>
 
 </resources>
