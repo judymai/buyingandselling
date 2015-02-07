@@ -41,6 +41,12 @@ public class MainActivity extends ActionBarActivity {
             case R.id.action_settings:
                 openSettings();
                 return true;
+            case R.id.action_profile:
+                openProfile();
+                return true;
+            case R.id.action_login:
+                openLogin();
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
@@ -55,7 +61,18 @@ public class MainActivity extends ActionBarActivity {
     }
 
     public void openSettings() {
+        Intent intent = new Intent(this, Settings.class);
+        startActivity(intent);
+    }
+
+    public void openProfile() {
         Intent intent = new Intent(this, SellerProfile.class);
         startActivity(intent);
     }
+
+    public void openLogin() {
+        Intent intent = new Intent(this,Login.class);
+        startActivity(intent);
+    }
+
 }

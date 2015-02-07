@@ -34,6 +34,10 @@ public class DisplayMessageActivity extends ActionBarActivity {
             return true;
         }
 
+        if (id == R.id.action_profile) {
+            return true;
+        }
+
         return super.onOptionsItemSelected(item);
     }
 }
