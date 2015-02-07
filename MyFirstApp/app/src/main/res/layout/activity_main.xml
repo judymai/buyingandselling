@@ -2,17 +2,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal" >
-
-    <EditText android:id="@+id/edit_message"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:hint="@string/edit_message"/>
+    android:orientation="horizontal"
+    android:weightSum="1">
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="@string/button_send"
-        android:onClick="sendMessage"/>
+        android:text="@string/action_login"
+        android:onClick="sendMessage"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:clickable="true"
+        android:elegantTextHeight="false"
+        android:enabled="false"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:paddingTop="0dp"
+        android:paddingBottom="0dp" />
+    <!--onClick with Parse should oAuth to FB-->
 </LinearLayout>

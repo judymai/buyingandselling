@@ -1,6 +1,10 @@
 package com.mycompany.myfirstapp;
 
+import android.app.SearchableInfo;
+import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
+import android.provider.ContactsContract;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -8,11 +12,23 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.app.Activity;
+import android.app.SearchManager;
+import android.app.SearchableInfo;
+import android.content.Context;
+import android.content.Intent;
+import android.database.Cursor;
+import android.os.Bundle;
+import android.provider.ContactsContract;
+import android.widget.SearchView;
+import android.widget.TextView;
 
 import com.parse.Parse;
 
 
 public class MainActivity extends ActionBarActivity {
+
+    private TextView displayText;
 
     public final static String EXTRA_MESSAGE = "com.mycompany.myfirstapp.MESSAGE";
 
@@ -20,7 +36,9 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         Parse.initialize(this, "DrytnAJeUWXXNixWdFQNB8gUqQDZsi0GSqO7sTB3", "6lgg4j81kBXjWjUMVociUUkc0D5yCxaDTy5W1gMP");
+
     }
 
 

@@ -10,4 +10,18 @@
     <TextView android:text="@string/profile_message" android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
+    <EditText android:id="@+id/edit_message"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:hint="@string/edit_message"
+        android:layout_gravity="center_vertical" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_send"
+        android:onClick="sendMessage"
+        android:layout_gravity="center_vertical" />
+
 </LinearLayout>
