@@ -78,6 +78,10 @@
             android:name=".Tabbed"
             android:label="@string/title_activity_tabbed" >
         </activity>
+        <activity
+            android:name=".Frag1"
+            android:label="@string/title_activity_frag1" >
+        </activity>
     </application>
 
 </manifest>
