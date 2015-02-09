@@ -1,11 +1,11 @@
-buyingandselling
+buyingandselling (BaSiC)
 ===================
 
 ###Collaborators:
 - Jacqueline Yeung (Junior)
-- Judy Mai (Freshman)
-- Sohail Sidique (Freshman)
-- Vivian Wang (Freshman)
+- Judy Mai (Freshman '18)
+- Sohail Sidique (Freshman '18)
+- Vivian Wang (Freshman '18)
 
 ###Project:
-A mobile app created using Parse designed to make it easier for Buyers & Sellers in Facebook groups to post and search for items.
+An Android app created (with Parse/Facebook API for TartanHacks@CMU) designed to make it easier for Buyers & Sellers in Facebook groups to post and search for items.
